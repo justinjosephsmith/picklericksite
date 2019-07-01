@@ -1,0 +1,27 @@
+#!/bin/bash 
+ 
+# my common aliases 
+alias l="ls -la" 
+alias gs="git status" 
+alias gf="git flow" 
+export EDITOR='vim' 
+ 
+# sudo yum update 
+ 
+# sudo yum install gitflow 
+ 
+git config --global user.name "Justin Smith" 
+git config --global user.email "justinjosephsmithdev@gmail.com" 
+git config --global core.editor "vim" 
+ 
+# headless chrome setup: https://developers.google.com/web/updates/2017/04/headless-chrome 
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+#sudo dpkg -i google-chrome-stable_current_amd64.deb 
+#rm google-chrome-stable_current_amd64.deb 
+ 
+# this also works on amazon linux. 
+#curl https://intoli.com/install-google-chrome.sh | bash 
+ 
+nvm install 10.16.0 
+npm install -g @angular/cli 
+npm install 
