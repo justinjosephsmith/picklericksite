@@ -1,9 +1,6 @@
 #!/bin/bash 
  
 # my common aliases 
-alias l="ls -la" 
-alias gs="git status" 
-alias gf="git flow" 
 export EDITOR='vim' 
  
 # sudo yum update 
