@@ -1,0 +1,12 @@
+<label>
+  Departure date:
+  <input type="text" [formControl]="departDate">
+</label>
+<p>
+  Value: {{departDate.value}}
+</p>
+<p>
+  <button (click)="resetDepartDate()" class="btn-primary">
+    Update Depart Date
+  </button>
+</p>
