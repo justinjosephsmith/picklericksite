@@ -11,14 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllMaterialModule } from './material-module';
 
-import { WorkTripComponent } from './work-trip/work-trip.component';
+// add components for app
 import { TripEntryComponent } from './trip-entry/trip-entry.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorkTripComponent,
     TripEntryComponent
   ],
   imports: [
