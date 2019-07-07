@@ -7,18 +7,22 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllMaterialModule } from './material-module';
 
 // add components for app
 import { TripEntryComponent } from './trip-entry/trip-entry.component';
-
+import { LayoutModule } from '@angular/cdk/layout';
+import { TimeEntryComponent } from './time-entry/time-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TripEntryComponent
+    TripEntryComponent,
+    TimeEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +30,11 @@ import { TripEntryComponent } from './trip-entry/trip-entry.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
     AllMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

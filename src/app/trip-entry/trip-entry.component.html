@@ -1,6 +1,22 @@
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Date" [formControl]="entryDate">
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Location</mat-label>
+    <input matInput [(ngModel)]="entry.Place">
+    <mat-icon matSuffix>add_location</mat-icon>
   </mat-form-field>
-  <button mat-fab>Click me!</button>
-</div>
+</p>
+<p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [(ngModel)]="entry.EntryDateTime">
+    <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
+    <mat-datepicker #entryDatePicker></mat-datepicker>
+  </mat-form-field>
+</p>
+<p>
+  <ngb-timepicker [(ngModel)]="entry.EntryDateTime" [meridian]="entry.Meridian"></ngb-timepicker>
+</p>
+<p>
+    The date / time is: {{entry.EntryDateTime}}
+</p>
+
+

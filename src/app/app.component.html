@@ -1,21 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button mat-button [matMenuTriggerFor]="menu">Trip Menu</button>
-    <mat-menu #menu="matMenu">
-      <a mat-menu-item href="#" class="nav-item nav-link">Trip Item 1</a>
-      <a mat-menu-item href="/tripentry" class="nav-item nav-link">Trip Entry</a>
-    </mat-menu>
-  <!-- <a class="navbar-brand" href="#">Travel Log</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link active" href="trip">Trip</a>
-      <a class="nav-item nav-link disabled" href="#">Flights</a>
-    </div>
-  </div> -->
-</nav>
+<mat-toolbar color="primary">
+  <a class="navbar-brand nav-link mat-menu-ite" href="#">
+    Pickle Rick Dev
+      <i class="fa fa-road"></i>
+  </a>
+  <button mat-button [matMenuTriggerFor]="menu">Trips</button>
+  <mat-menu #menu="matMenu">
+    <a class="mat-menu-item nav-link" href="tripentry">Trip Entry</a>
+    <a class="mat-menu-item nav-link" href="#">home</a>
+  </mat-menu>
+</mat-toolbar>
 <!-- views for active routed component render here -->
 <router-outlet></router-outlet>
