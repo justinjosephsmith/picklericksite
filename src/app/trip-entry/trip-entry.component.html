@@ -1,22 +1,24 @@
 <p>
-  <mat-form-field appearance="outline">
-    <mat-label>Location</mat-label>
-    <input matInput [(ngModel)]="entry.Place">
-    <mat-icon matSuffix>add_location</mat-icon>
-  </mat-form-field>
+  space
 </p>
 <p>
   <mat-form-field>
-    <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [(ngModel)]="entry.EntryDateTime">
+    <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [(ngModel)]="theDate">
     <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
     <mat-datepicker #entryDatePicker></mat-datepicker>
   </mat-form-field>
 </p>
 <p>
-  <ngb-timepicker [(ngModel)]="entry.EntryDateTime" [meridian]="entry.Meridian"></ngb-timepicker>
+  <ngb-timepicker [(ngModel)]="theTime">
+
+  </ngb-timepicker>
 </p>
 <p>
-    The date / time is: {{entry.EntryDateTime}}
+  The date: {{theDate}}
 </p>
-
-
+<p>
+  The time: {{theTime}}
+</p>
+<p>
+    <button mat-flat-button color="primary" (click)="onClick()">Primary</button>
+</p>
