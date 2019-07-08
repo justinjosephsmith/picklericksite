@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {TripEntryComponent} from './trip-entry/trip-entry.component'
 
 const routes: Routes = [
-  {path:'tripentry', component: TripEntryComponent}
+  {path:'tripentry', component: TripEntryComponent},
+  {path:'', redirectTo: '/#', pathMatch: 'full'}
 ];
 
 @NgModule({
