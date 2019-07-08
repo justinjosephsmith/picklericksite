@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import {TripEntryComponent} from './trip-entry/trip-entry.component'
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:'tripentry', component: TripEntryComponent},
-  {path:'', redirectTo: '/#', pathMatch: 'full'}
+  {path:'home', component: HomeComponent}
 ];
 
 @NgModule({

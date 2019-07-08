@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
-  <a class="navbar-brand nav-link mat-menu-ite" href="#">
+  <a class="navbar-brand nav-link mat-menu-ite" routerLink="home">
     Pickle Rick Dev
       <i class="fa fa-road"></i>
   </a>
   <button mat-button [matMenuTriggerFor]="menu">Trips</button>
   <mat-menu #menu="matMenu">
-    <a class="mat-menu-item nav-link" href="tripentry">Trip Entry</a>
-    <a class="mat-menu-item nav-link" href="#">home</a>
+    <a class="mat-menu-item nav-link" routerLink="tripentry">Trip Entry</a>
+    <a class="mat-menu-item nav-link" routerLink="home">home</a>
   </mat-menu>
 </mat-toolbar>
 <!-- views for active routed component render here -->

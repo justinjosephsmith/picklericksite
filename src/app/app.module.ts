@@ -17,12 +17,14 @@ import { AllMaterialModule } from './material-module';
 import { TripEntryComponent } from './trip-entry/trip-entry.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TimeEntryComponent } from './time-entry/time-entry.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TripEntryComponent,
-    TimeEntryComponent
+    TimeEntryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
