@@ -1,13 +1,24 @@
 <mat-toolbar color="primary">
-  <a class="navbar-brand nav-link mat-menu-ite" routerLink="home">
-    Pickle Rick Dev
-      <i class="fa fa-road"></i>
-  </a>
-  <button mat-button [matMenuTriggerFor]="menu">Trips</button>
-  <mat-menu #menu="matMenu">
-    <a class="mat-menu-item nav-link" routerLink="tripentry">Trip Entry</a>
-    <a class="mat-menu-item nav-link" routerLink="home">home</a>
-  </mat-menu>
+  <mat-toolbar-row>
+    <span>
+        <a class="navbar-brand" routerLink="home">
+            Pickle Rick Dev
+            <i class="fa fa-road"></i>
+          </a>
+          <button mat-button [matMenuTriggerFor]="menu">Trips</button>
+          <mat-menu #menu="matMenu">
+            <a class="mat-menu-item nav-link" routerLink="tripentry">Trip Entry</a>
+            <a class="mat-menu-item nav-link" routerLink="home">home</a>
+          </mat-menu>
+          <button mat-button routerLink="tripentry">Create Entry</button>
+          <button mat-button routerLink="transitpoint">Transit Point</button>
+    </span>
+    <span class="fill-center"></span>
+
+    <span>
+        <i class="fa fa-user"></i>
+    </span>
+  </mat-toolbar-row>
 </mat-toolbar>
 <!-- views for active routed component render here -->
 <router-outlet></router-outlet>

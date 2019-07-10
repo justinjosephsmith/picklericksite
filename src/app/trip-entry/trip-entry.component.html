@@ -1,24 +1,26 @@
-<p>
-  space
-</p>
-<p>
-  <mat-form-field>
-    <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [(ngModel)]="theDate">
-    <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #entryDatePicker></mat-datepicker>
-  </mat-form-field>
-</p>
-<p>
-  <ngb-timepicker [(ngModel)]="theTime">
+<form action="">
+    
+</form>
+  <p>
+    <mat-form-field>
+      <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [(ngModel)]="theDate">
+      <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #entryDatePicker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
 
-  </ngb-timepicker>
-</p>
-<p>
-  The date: {{theDate}}
-</p>
-<p>
-  The time: {{theTime}}
-</p>
-<p>
+    <ngb-timepicker [(ngModel)]="theTime"></ngb-timepicker>
+
+  </p>
+  <p>
+    The date: {{theDate}}
+  </p>
+  <p>
+    The time: {{theTime}}
+  </p>
+  <p>
+
     <button mat-flat-button color="primary" (click)="onClick($event)">Submit</button>
-</p>
+
+  </p>

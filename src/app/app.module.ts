@@ -12,19 +12,20 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllMaterialModule } from './material-module';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 // add components for app
 import { TripEntryComponent } from './trip-entry/trip-entry.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { TimeEntryComponent } from './time-entry/time-entry.component';
 import { HomeComponent } from './home/home.component';
+import { TransitPointComponent } from './transit-point/transit-point.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TripEntryComponent,
-    TimeEntryComponent,
-    HomeComponent
+    HomeComponent,
+    TransitPointComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { HomeComponent } from './home/home.component';
     AllMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    LayoutModule
+    LayoutModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
