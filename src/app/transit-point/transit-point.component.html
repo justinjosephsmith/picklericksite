@@ -9,7 +9,9 @@
   </p>
   <p>
     <mat-form-field>
-      <input matInput placeholder="Time" type="time" [(ngModel)]="time" name="timeControl">
+      <input matInput placeholder="Time" type="time" [(ngModel)]="time" name="timeControl" (change)="timeChanged()">
     </mat-form-field>
   </p>
 </form>
+<p>Date: {{date.value}}</p>
+<p>Time: {{time}}</p>

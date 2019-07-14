@@ -19,7 +19,20 @@ export class TransitPointComponent implements OnInit {
   }
 
   dateChanged(type: string, event: MatDatepickerInputEvent<Date>) {
-    console.log(`${type}: ${event.value}`);
+    console.log("Date Changed: " + `${type}: ${event.value}`);
+    let newDate = this.mergeTimeWithDate(this.date.value, this.time)
+    this.date.setValue(newDate);  
+  }
+
+  timeChanged() {
+    let newDate = this.mergeTimeWithDate(this.date.value, this.time)
+    this.date.setValue(newDate);  
+  }
+
+  mergeTimeWithDate(date: Date, time: string): Date {
+    let mom = moment(time, "HH:mm");
+    date.setHours(mom.hours(), mom.minutes());
+    return date;
   }
 
 }
