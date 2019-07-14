@@ -11,11 +11,13 @@ import * as moment from 'moment';
 export class TransitPointComponent implements OnInit {
   
   date: FormControl;
-  time = moment().format("HH:mm");
-
+  time: string;
+  waypoint: string;
+  
   ngOnInit() {
     this.date = new FormControl(new Date());
-    console.log(this.date.value);
+    this.time = moment().format("HH:mm");
+    this.waypoint = "Leave Home";
   }
 
   dateChanged(type: string, event: MatDatepickerInputEvent<Date>) {
@@ -29,10 +31,19 @@ export class TransitPointComponent implements OnInit {
     this.date.setValue(newDate);  
   }
 
+  waypointChanged() {
+    console.log("waypoint changed");
+  }
+
   mergeTimeWithDate(date: Date, time: string): Date {
     let mom = moment(time, "HH:mm");
     date.setHours(mom.hours(), mom.minutes());
     return date;
+  }
+
+  // TODO - submit date/time/waypoint to http service
+  onSubmit() {
+    console.log("Submit clicked: " + this.date.value + ` ${this.waypoint}`);
   }
 
 }

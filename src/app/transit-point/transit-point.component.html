@@ -1,4 +1,4 @@
-<form #transitForm="ngForm" #spy class="form">
+<form #transitForm="ngForm" (ngSubmit)="onSubmit()" #spy class="form">
   <p>
     <mat-form-field>
       <input matInput [matDatepicker]="datePicker" placeholder="Date" [formControl]="date"
@@ -12,6 +12,12 @@
       <input matInput placeholder="Time" type="time" [(ngModel)]="time" name="timeControl" (change)="timeChanged()">
     </mat-form-field>
   </p>
+  <p>
+    <mat-form-field>
+        <input matInput placeholder="Waypoint" [(ngModel)]="waypoint" name="waypointCtl" (change)="waypointChanged()">
+    </mat-form-field>
+  </p>
+  <p>
+      <button type="submit" class="mdc_button mdc-button--raised">Submit</button>
+  </p>
 </form>
-<p>Date: {{date.value}}</p>
-<p>Time: {{time}}</p>

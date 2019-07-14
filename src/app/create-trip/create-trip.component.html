@@ -1,0 +1,14 @@
+<form #tripForm="ngForm" (ngSubmit)="onSubmit()" #spy class="form">
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="datePicker" placeholder="Date" [formControl]="date"
+          (dateChange)="dateChanged('change', $event)">
+        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+        <mat-datepicker #datePicker></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+        <button type="submit" class="mdc_button mdc-button--raised">Submit</button>
+    </p>
+  </form>
+  
