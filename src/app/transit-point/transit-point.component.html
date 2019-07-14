@@ -1,26 +1,15 @@
-<form #transitForm="ngForm">
-  <div class="form-group">
-    <label for="name">Date</label>
-    <input type="text" class="form-control" id="name" required [(ngModel)]="transitModel.date" name="date" #spy>
-    <br>
-    {{spy.className}}
-  </div>
-
-  <mat-form-field>
-    <input matInput [matDatepicker]="entryDatePicker" placeholder="Date" [value]="date.value">
-    <mat-datepicker-toggle matSuffix [for]="entryDatePicker"></mat-datepicker-toggle>
-    <mat-datepicker #entryDatePicker></mat-datepicker>
-  </mat-form-field>
-
-  <div class="form-group">
-    <input [ngxTimepicker]="picker" [value]="'17:11'">
-    <ngx-material-timepicker #picker></ngx-material-timepicker>
-  </div>
-
-  <div class="form-group">
-    <label for="location">Location</label>
-    <input type="text" class="form-control" id="location" name="location" [(ngModel)]="transitModel.location">
-  </div>
-
-  <button type="submit" class="btn btn-success">Submit</button>
+<form #transitForm="ngForm" #spy class="form">
+  <p>
+    <mat-form-field>
+      <input matInput [matDatepicker]="datePicker" placeholder="Date" [formControl]="date"
+        (dateChange)="dateChanged('change', $event)">
+      <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+      <mat-datepicker #datePicker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Time" type="time" [(ngModel)]="time" name="timeControl">
+    </mat-form-field>
+  </p>
 </form>
