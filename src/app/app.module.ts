@@ -15,7 +15,6 @@ import { AllMaterialModule } from './material-module';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 // add components for app
-import { TripEntryComponent } from './trip-entry/trip-entry.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { TransitPointComponent } from './transit-point/transit-point.component';
@@ -23,7 +22,6 @@ import { TransitPointComponent } from './transit-point/transit-point.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TripEntryComponent,
     HomeComponent,
     TransitPointComponent
   ],
