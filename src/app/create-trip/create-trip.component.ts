@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-create-trip',
@@ -8,12 +9,15 @@ import { FormControl } from '@angular/forms';
 })
 export class CreateTripComponent implements OnInit {
 
-  date: FormControl
+  startDate: FormControl;
+  endDate: FormControl;
 
   constructor() { }
 
   ngOnInit() {
-    this.date = new FormControl(new Date());
+    this.startDate = new FormControl(new Date());
+    let tomorrow = moment(new Date()).add(1, 'd').toDate();
+    this.endDate = new FormControl(tomorrow);
   }
 
   dateChanged(){

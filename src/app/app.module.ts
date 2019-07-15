@@ -11,11 +11,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AllMaterialModule } from './material-module';
 
+import { OktaAuthModule, OktaCallbackComponent } from '@okta/okta-angular';
+
 // add components for app
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { TransitPointComponent } from './transit-point/transit-point.component';
 import { CreateTripComponent } from './create-trip/create-trip.component';
+
+const config = {
+  issuer: 'https://dev-935725.okta.com/oauth2/default',
+  redirectUri: 'http://localhost:4200/implicit/callback',
+  clientId: '0oawnjmpmSIKQwKEa356'
+}
+
 
 @NgModule({
   declarations: [
@@ -33,7 +42,8 @@ import { CreateTripComponent } from './create-trip/create-trip.component';
     NgbModule,
     AllMaterialModule,
     ReactiveFormsModule,
-    LayoutModule
+    LayoutModule,
+    OktaAuthModule.initAuth(config)
   ],
   providers: [],
   bootstrap: [AppComponent]

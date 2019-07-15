@@ -1,14 +1,22 @@
 <form #tripForm="ngForm" (ngSubmit)="onSubmit()" #spy class="form">
     <p>
       <mat-form-field>
-        <input matInput [matDatepicker]="datePicker" placeholder="Date" [formControl]="date"
-          (dateChange)="dateChanged('change', $event)">
-        <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
-        <mat-datepicker #datePicker></mat-datepicker>
+        <input matInput [matDatepicker]="startPicker" placeholder="Start Date" [formControl]="startDate"
+          (dateChange)="dateChanged('startchange', $event)">
+        <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker>
       </mat-form-field>
     </p>
     <p>
-        <button type="submit" mat-flat-button color="primary">Submit</button>
+        <mat-form-field>
+          <input matInput [matDatepicker]="endPicker" placeholder="End Date" [formControl]="endDate"
+            (dateChange)="dateChanged('endchange', $event)">
+          <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+          <mat-datepicker #endPicker></mat-datepicker>
+        </mat-form-field>
+      </p>
+    <p>
+        <button type="submit" mat-flat-button color="primary">Create Trip</button>
     </p>
   </form>
   

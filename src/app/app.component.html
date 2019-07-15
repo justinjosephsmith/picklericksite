@@ -1,24 +1,33 @@
 <div class="row">
   <div class="col-sm">
-      <mat-toolbar color="primary">
-          <mat-toolbar-row>
-            <span>
-              <a class="navbar-brand" routerLink="home">
-                TripTok
-                <i class="fa fa-road"></i>
-              </a>
-              <button mat-button routerLink="transitpoint">Transit Point</button>
-              <button mat-button routerLink="createtrip">Create Trip</button>
-            </span>
-            <span class="fill-center"></span>
-            <span>
-              <i class="fa fa-user"></i>
-            </span>
-          </mat-toolbar-row>
-        </mat-toolbar>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span>
+          <a class="navbar-brand" routerLink="home">
+            TripTok
+            <i class="fa fa-road"></i>
+          </a>
+          <button mat-button routerLink="transitpoint">Transit Point</button>
+          <button mat-button routerLink="createtrip">Create Trip</button>
+        </span>
+        <span class="fill-center"></span>
+        <span>
+          <i class="fa fa-user"></i>
+        </span>
+      </mat-toolbar-row>
+    </mat-toolbar>
   </div>
 </div>
 <!-- views for active routed component render here -->
+<!-- <div class="row content">
+  <div class="col-sm">
+    <button *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+    <button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+    <p>
+      {{authToken | json}}
+    </p>
+  </div>
+</div> -->
 <div class="row content">
   <div class="col-sm">
     <router-outlet></router-outlet>
