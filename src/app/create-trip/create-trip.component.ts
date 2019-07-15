@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import * as moment from 'moment';
+import { MatDatepickerInputEvent } from '@angular/material';
 
 @Component({
   selector: 'app-create-trip',
@@ -20,8 +21,13 @@ export class CreateTripComponent implements OnInit {
     this.endDate = new FormControl(tomorrow);
   }
 
-  dateChanged(){
+  dateChanged(control: string, event: MatDatepickerInputEvent<Date>){
 
   }
+
+    // TODO - submit trip to http service
+    onSubmit() {
+      console.log("Submit clicked:");
+    }
 
 }

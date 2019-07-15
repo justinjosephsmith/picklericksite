@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OktaAuthService } from '@okta/okta-angular';
+import { OktaAuthService, UserClaims } from '@okta/okta-angular';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,15 @@ import { OktaAuthService } from '@okta/okta-angular';
 export class AppComponent implements OnInit {
   title = 'TripTok';
   isAuthenticated: boolean;
-  authToken: any;
+  authToken: UserClaims;
 
   constructor(public oktaAuth: OktaAuthService) {
     // Subscribe to authentication state changes
     this.oktaAuth.$authenticationState.subscribe(
-      (isAuthenticated: boolean)  => this.isAuthenticated = isAuthenticated
+      async (isAuthenticated: boolean)  =>  {
+        this.isAuthenticated = isAuthenticated;
+        this.authToken = await this.oktaAuth.getUser();
+      }
     );
   }
 
@@ -30,5 +33,6 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.oktaAuth.logout('/');
+    this.authToken = null;
   }
 }
