@@ -1,4 +1,4 @@
-# Pickle Rick Netlify Angular Site
+# Test Angular site with Netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5d31d19b-aadb-4fe2-b14e-63c3a0ac3eb9/deploy-status)](https://app.netlify.com/sites/affectionate-rosalind-4fce75/deploys)
 Test project for netlify and angular, hopefully to validate okta.
 
