@@ -19,9 +19,15 @@ import { HomeComponent } from './home/home.component';
 import { TransitPointComponent } from './transit-point/transit-point.component';
 import { CreateTripComponent } from './create-trip/create-trip.component';
 
+// const config = {
+//   issuer: 'https://dev-935725.okta.com/oauth2/default',
+//   redirectUri: 'http://localhost:4200/implicit/callback',
+//   clientId: '0oawnjmpmSIKQwKEa356'
+// }
+
 const config = {
   issuer: 'https://dev-935725.okta.com/oauth2/default',
-  redirectUri: 'http://localhost:4200/implicit/callback',
+  redirectUri: 'https://affectionate-rosalind-4fce75.netlify.com/implicit/callback',
   clientId: '0oawnjmpmSIKQwKEa356'
 }
 
