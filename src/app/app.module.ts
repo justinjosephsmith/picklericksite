@@ -29,7 +29,7 @@ import { CreateTripComponent } from './create-trip/create-trip.component';
 // clientId is not a secret.
 const config = {
   issuer: 'https://dev-935725.okta.com/oauth2/default',
-  redirectUri: 'https://affectionate-rosalind-4fce75.netlify.com/implicit/callback',
+  redirectUri: 'https://triptok.netlify.com/implicit/callback',
   clientId: '0oawnjmpmSIKQwKEa356'
 }
 
